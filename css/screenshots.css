@@ -1,31 +1,6 @@
-/*.screenshots {
-    width: 55%;
-
-    display: grid;
-    grid-template-areas: 
-    "e1 e2 e2"
-    "e3 e3 e3";
-    gap: 2em;
-}
-
-.screenshot:nth-child(1) {
-    grid-area: e1;
-}
-.screenshot:nth-child(2) {
-    grid-area: e2;
-}
-.screenshot:nth-child(3) {
-    grid-area: e3;
-}
-
-img {
-    width: inherit;
-    height: 400px;
-}
-*/
-
 .screenshots {
     display: flex;
     gap: 2em;
-    align-items: flex-end;    
+    align-items: flex-end;
+    flex-wrap: wrap;    
 }
