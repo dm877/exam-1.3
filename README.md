@@ -13,25 +13,4 @@
 *    На мобилке меню скроллится с помощью стандартного горизонтального скролла, см. свойство overflow
 * На различный порядок и количество пунктов меню не обращайте внимание - меню на всех разрешениях должно быть одинаковым. По непонятным моментам в макете - обращайтесь к однокурсникам или ментору.
 
-### Скриншоты:
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/screenshots.css">
-</head>
-<body>
-    <div class="screenshots">
-        <div class="screenshot">
-            <img src="./imgs/screenshots/mobile.png" alt="Мобильная версия">
-        </div>
-        <div class="screenshot">
-            <img src="./imgs/screenshots/horizontal.png" alt="Десктопная версия">
-        </div>
-        <div class="screenshot">
-            <img src="./imgs/screenshots/long-horizontal_1.jpg" alt="Длинная десктопная версия">
-        </div>
-    </div>
-</body>
-
-
-
 
