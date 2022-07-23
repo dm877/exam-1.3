@@ -4,20 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тестирование</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>1.3 макет</title>
 </head>
 <body>
-    <header>
-
+    <header class="main-menu">
+        <button class="element menu"></button>
+        <img src="imgs/logo.svg" alt="Логотип компании" class="logo">
+        <button class="element repair"></button>
+        <button class="element search"></button>
     </header>
-   <main>
-    <h1>Услуги и сервисы</h1>
-    <nav>
-       <ul>
-           <li><button>Ремонтируемые бренды</button></li>
-           <li><button>Ремонтируемые устройства</button></li>
-       </ul>
-    </nav>
+   <main class="main-content">
+    <div class="title">
+        <img src="imgs/highlight.svg" alt="хайлайт" class="title__highlight">
+        <h1 class="title__text">Услуги и сервисы</h1>
+    </div>
+    <div class="side-menu">
+            <button>Ремонтируемые бренды</button>
+            <button>Дополнительные услуги</button>
+            <button>Цены на услуги</button>
+            <button>Адреса сервисных центров</button>
+            <button>Ремонтируемые устройства</button>
+            <button>Отзывы</button>
+    </div>
+    <section class="content">
+        <div class="">
+            <p class="content__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+            <label><img src="imgs/read-more-label.svg" alt="иконка"><button class="show-more">Читать далее</button></div>
+            </label>
+        <img src="imgs/01.png" alt="Наша гордая стена">
+    </section>
    </main>
 </body>
 </html>
