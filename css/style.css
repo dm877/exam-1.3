@@ -4,8 +4,9 @@
 }
 
 .page__page-header {
+    box-sizing: border-box;
     margin: 0;
-    padding: auto 0;
+    padding: 0 20px;
     width: 100%;
     height: 88px;
 }
@@ -13,7 +14,8 @@
 .page-header {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 15px;
 }
 
 .page-header__button {
@@ -26,13 +28,14 @@
     background-position: center center;
 }
 
+
 .page-header__button_menu {
     background-image: url(../imgs/icons/menu.svg);
 }
-.page-header___button_repair {
+.page-header__button_repair {
     background-image: url(../imgs/icons/repair.svg);
 }
-.page-header___button_search {
+.page-header__button_search {
     background-image: url(../imgs/icons/search.svg);
 }
 
@@ -40,19 +43,18 @@
     background: url(../imgs/divider.svg) no-repeat right;
     float: right;
     padding-right: 20px;
+    margin-right: auto;
 }
 
 .main {
+    background-color: #F8F8F8;
+    height: 100%;
     font-family: TT Lakes;
+    padding-top: 12px;
 }
 
 .page__main {
     width: 100vw;
-    background-color: #F8F8F8;
-}
-
-.title {
-    display: flex;
 }
 
 .main__title {
@@ -68,16 +70,12 @@
     background-size: contain;
     width: 4px;
     height: 40px;
-    margin-right: 5px;
+    margin-right: 12px;
     float: left;
 }
 
 .main__side-menu {
     margin: 0px 16px 16px;
-    /*
-    border-right: 24px solid transparent; 
-    border-image: url(../imgs/fade.svg); 
-    */
 }
 
 .side-menu {
@@ -86,41 +84,46 @@
     gap: 5px;
 }
 
-.side-menu::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
-
 .side-menu__nav-button {
     font-family: TT Lakes;
     font-size: 16px;
     line-height: 24px;
     color: #7E7E82;
+    background-color: inherit;
     padding: 5px 15px;
-    border: 2px solid #B8FFEC;
-    border-radius: 5px;
-    background-color: #FFFFFF;
+    border: none;
     white-space: nowrap;
 }
 
-.main__content {
-
+.side-menu__nav-button_selected {
+    border: 2px solid #B8FFEC;
+    border-radius: 5px;
+    background-color: #FFFFFF;
 }
+
+.main__content {
+    margin-top: 25px;
+}
+
+.content {
+    height: 100%;
+   display: flex;
+   flex-wrap: wrap; 
+}
+
 
 .content__content-img:last-child {
-    width: inherit;
+    width: auto;
 }
 
-
-
 .content__text {
+    max-width: 320px;
     margin: 0 16px 16px;
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.2px;
     color: #1B1C21;
-    min-height: 40%;
-
+    height: fit-content;
     display: inline-block;
 }
 
@@ -129,14 +132,12 @@
 }
 
 .show-more {
-    /* Читать далее */
     font-family: 'TT Lakes';
     font-size: 16px;
     line-height: 24px;
-    font-weight: medium;
+    font-weight: 500;
     background-color: inherit;
     border: none;
-    /* identical to box height, or 150% */
     letter-spacing: -0.2px;
     color: #1B1C21;
 }
