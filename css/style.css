@@ -46,15 +46,10 @@
     margin-right: auto;
 }
 
-.main {
+.page__main {
     background-color: #F8F8F8;
-    height: 100%;
     font-family: TT Lakes;
     padding-top: 12px;
-}
-
-.page__main {
-    width: 100vw;
 }
 
 .main__title {
@@ -106,29 +101,34 @@
 }
 
 .content {
-    height: 100%;
    display: flex;
-   flex-wrap: wrap; 
+   flex-wrap: wrap;
 }
 
 
-.content__content-img:last-child {
-    width: auto;
+.content__content-img {
+    flex-basis: 50%;
+    flex-grow: 1;
+    border-radius: 5px;
 }
 
-.content__text {
-    max-width: 320px;
-    margin: 0 16px 16px;
+
+.content__text-container {
+    flex-basis: 50%;
+    flex-grow: 1;
+    padding: 0 16px 16px;
+    box-sizing: border-box;
+}
+
+.text-container__text {
+    font-family: TT Lakes;
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.2px;
     color: #1B1C21;
-    height: fit-content;
-    display: inline-block;
 }
 
-.content__show-more {
-    margin-top: 16px;
+.text-container__show-more {
 }
 
 .show-more {
