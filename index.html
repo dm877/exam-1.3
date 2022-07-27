@@ -10,12 +10,22 @@
 <body class="page">
     <header class="page__page-header page-header">
         <button class="page-header__button page-header__button_menu"></button>
-        <img src="imgs/logo.svg" alt="Логотип компании" class="page-header__logo _vertical-divider">
-        <button class="page-header__button page-header__button_repair"></button>
-        <button class="page-header__button page-header__button_search"></button>
+        <span class="page-header__vertical-divider"></span>
+        <img src="imgs/logo.svg" alt="Логотип компании" class="page-header__logo">
+        <span class="page-header__vertical-divider"></span>
+        <button class="page-header__button page-header__button_call"></button>
+        <button class="page-header__button page-header__button_chat"></button>
+        <button class="page-header__button page-header__button_profile"></button>
+        <span class="page-header__vertical-divider"></span>
+        <label for="repair" class="page-header__repair">Оставить заявку</label> <button id="repair" class="page-header__button page-header__button_repair"></button>
+        <label for="search" class="page-header__search">Статус ремонта</label> <button id="search" class="page-header__button page-header__button_search"></button>
     </header>
    <main class="page__main main">
-    <h1 class="main__title">Услуги и сервисы</h1>
+    <div class="main__title-container">
+        <h1 class="main__title">Услуги и сервисы</h1>
+        <label for="repair" class="page-header__repair">Оставить заявку</label> <button id="repair" class="page-header__button page-header__button_repair"></button>
+        <label for="search" class="page-header__search">Статус ремонта</label> <button id="search" class="page-header__button page-header__button_search"></button>
+    </div>
     <nav class="main__side-menu side-menu">
             <button type="button" class="side-menu__nav-button">Ремонтируемые устройства</button>
             <button type="button" class="side-menu__nav-button">Ремонтируемые бренды</button>

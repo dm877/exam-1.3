@@ -1,4 +1,5 @@
 
+
 .page {
     font-family: TT Lakes;
     background-color: #F8F8F8;
@@ -17,7 +18,7 @@
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 15px;
     border-bottom: 1px solid #D9FFF5;
     
@@ -33,6 +34,18 @@
     background-position: center center;
 }
 
+.page-header__logo {
+    margin-right: auto;
+}
+.page-header__button_chat {
+    background-image: url('data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M18 0H2C0.9 0 0.01 0.9 0.01 2L0 20L4 15H18C19.1 15 20 14.1 20 13V2C20 0.9 19.1 0 18 0ZM11 11H5C4.45 11 4 10.55 4 10C4 9.45 4.45 9 5 9H11C11.55 9 12 9.45 12 10C12 10.55 11.55 11 11 11ZM15 6H5C4.45 6 4 5.55 4 5C4 4.45 4.45 4 5 4H15C15.55 4 16 4.45 16 5C16 5.55 15.55 6 15 6Z" fill="white"/%3E%3C/svg%3E');
+}
+.page-header__button_call {
+    background-image: url('data:image/svg+xml,%3Csvg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M1.76019 12.25L4.30019 11.96C4.91019 11.89 5.51019 12.1 5.94019 12.53L7.78019 14.37C10.6102 12.93 12.9302 10.62 14.3702 7.78L12.5202 5.93C12.0902 5.5 11.8802 4.9 11.9502 4.29L12.2402 1.77C12.3602 0.76 13.2102 0 14.2302 0H15.9602C17.0902 0 18.0302 0.94 17.9602 2.07C17.4302 10.61 10.6002 17.43 2.07019 17.96C0.940193 18.03 0.00019455 17.09 0.00019455 15.96V14.23C-0.00980568 13.22 0.750193 12.37 1.76019 12.25Z" fill="white"/%3E%3C/svg%3E');
+}
+.page-header__button_profile {
+    background-image: url('data:image/svg+xml,%3Csvg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M10.5 9C12.9853 9 15 6.98528 15 4.5C15 2.01472 12.9853 0 10.5 0C8.01472 0 6 2.01472 6 4.5C6 6.98528 8.01472 9 10.5 9Z" fill="white"/%3E%3Cpath d="M0.0165859 16.6118C-0.113065 17.3412 0.535191 18 1.33903 18H18.6604C19.4902 18 20.1125 17.3412 19.9829 16.6118C19.2309 12.4 15.0561 10 9.99973 10C4.94333 10 0.768563 12.4 0.0165859 16.6118Z" fill="white"/%3E%3C/svg%3E');
+}
 .page-header__button_menu {
 	background-image: url("data:image/svg+xml,%3Csvg width='18' height='16' viewBox='0 0 18 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 1C0 0.447715 0.447715 0 1 0H17C17.5523 0 18 0.447715 18 1C18 1.55228 17.5523 2 17 2H1C0.447716 2 0 1.55228 0 1ZM0 8C0 7.44772 0.447715 7 1 7H9C9.55228 7 10 7.44772 10 8C10 8.55229 9.55229 9 9 9H1C0.447715 9 0 8.55229 0 8ZM1 14C0.447715 14 0 14.4477 0 15C0 15.5523 0.447716 16 1 16H13C13.5523 16 14 15.5523 14 15C14 14.4477 13.5523 14 13 14H1Z' fill='white'/%3E%3C/svg%3E");
 }
@@ -43,15 +56,22 @@
     background-image: url('data:image/svg+xml,%3Csvg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M0 1C0 0.447715 0.447715 0 1 0H15C15.5523 0 16 0.447716 16 1V18.5C15.1716 18.5 14.5001 19.1715 14.5 19.9999H13.5C13.4999 19.1715 12.8284 18.5 12 18.5C11.1716 18.5 10.5001 19.1715 10.5 19.9999H9.5C9.49994 19.1715 8.82839 18.5 8 18.5C7.17161 18.5 6.50006 19.1715 6.5 19.9999H5.5C5.49994 19.1715 4.82839 18.5 4 18.5C3.17161 18.5 2.50006 19.1715 2.5 19.9999H1.5C1.49994 19.1715 0.828392 18.5 0 18.5V1ZM9.41635 11.7884C8.55361 12.3444 7.47039 12.5936 6.32965 12.3827C4.52748 12.0472 3.08957 10.5327 2.85951 8.71142C2.49524 5.82612 4.94926 3.42012 7.85383 3.88023C9.656 4.1678 11.1035 5.644 11.4007 7.43652C11.5828 8.54846 11.324 9.57413 10.7872 10.4273L12.8961 12.5265C13.2699 12.9004 13.2699 13.5138 12.8961 13.8877C12.5126 14.2711 11.8991 14.2711 11.5253 13.8973L9.41635 11.7884ZM4.70588 8.05882C4.70588 6.76 5.76 5.70588 7.05882 5.70588C8.35765 5.70588 9.41177 6.76 9.41177 8.05882C9.41177 9.35765 8.35765 10.4118 7.05882 10.4118C5.76 10.4118 4.70588 9.35765 4.70588 8.05882Z" fill="white"/%3E%3C/svg%3E');
 }
 
-._vertical-divider {
-    background: url(../imgs/divider.svg) no-repeat right;
-    float: right;
-    padding-right: 20px;
-    margin-right: auto;
+.page-header__vertical-divider {
+    width: 2px;
+    height: 32px;
+    background-image: url('data:image/svg+xml,%3Csvg width="2" height="32" viewBox="0 0 2 32" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="2" height="32" rx="1" fill="%23EAEAEA"/%3E%3C/svg%3E');
 }
 
 .page__main {
     padding-top: 24px;
+}
+
+.main__title-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    margin-right: 24px;
+    gap: 15px;
 }
 
 .main__title {
@@ -59,8 +79,8 @@
     line-height: 40px;
     font-weight: bold;
     letter-spacing: -0.6px;
-    margin-top: 0;
-    margin-bottom: 24px;
+    margin: 0;
+    margin-right: auto;
 }
 
 .main__title::before {
@@ -119,7 +139,6 @@
 .content__text-container {
     flex-basis: 50%;
     flex-grow: 1;
-    padding: 0 16px 16px;
     box-sizing: border-box;
 }
 
@@ -128,9 +147,7 @@
     line-height: 18px;
     letter-spacing: 0.2px;
     color: #1B1C21;
-}
 
-.text-container__show-more {
 }
 
 .show-more {
@@ -153,3 +170,79 @@
 }
 
 
+@media (max-width: 1110px) {
+    .page-header__repair {
+        display: none;
+    }
+    .page-header__search {
+        display: none;
+    }
+    .page-header__vertical-divider:nth-of-type(2) {
+        display: none;
+    }
+    .main .page-header__button {
+        display: none;
+    }
+    .text-container__text {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    .text-container__text::after {
+        margin-top: 16px;
+        content: "Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера";
+        display: block;
+
+    }
+    .content__text-container {
+        padding-right: 24px;
+    }.main__content {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+@media (max-width: 768px) {
+    
+    .page-header__vertical-divider:nth-of-type(1), .page-header__vertical-divider:nth-of-type(3) {
+        display: none;
+    }
+    .page-header__button_call, .page-header__button_chat, .page-header__button_profile {
+        display: none;
+    }
+    .page-header__vertical-divider:nth-of-type(2) {
+        display: block;
+    }
+
+    .main__content {
+        padding: 0;
+    }
+    
+    .content__text-container {
+        padding: 0px 16px 16px;
+    }
+    .text-container__text::after {
+        display: none;
+    }
+}
+
+@media (min-width: 1110px) {
+    .page-header {
+        display: none;
+    }
+    .side-menu {
+        overflow: visible;
+        flex-wrap: wrap;
+    }
+    .text-container__text::after {
+        margin-top: 14px;
+        content: "Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким."; 
+        display: block;
+
+    }
+
+    .main__content {
+        margin: 0 35px;
+        gap: 36px;
+        flex-wrap: nowrap;
+    }
+
+}
