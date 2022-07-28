@@ -21,25 +21,28 @@
         <label for="search" class="page-header__search">Статус ремонта</label> <button id="search" class="page-header__button page-header__button_search"></button>
     </header>
    <main class="page__main main">
-    <div class="main__title-container">
+    <header class="main__title-container">
         <h1 class="main__title">Услуги и сервисы</h1>
         <label for="repair" class="page-header__repair">Оставить заявку</label> <button id="repair" class="page-header__button page-header__button_repair"></button>
         <label for="search" class="page-header__search">Статус ремонта</label> <button id="search" class="page-header__button page-header__button_search"></button>
-    </div>
-    <nav class="main__side-menu side-menu">
-            <button type="button" class="side-menu__nav-button">Ремонтируемые устройства</button>
-            <button type="button" class="side-menu__nav-button">Ремонтируемые бренды</button>
-            <button type="button" class="side-menu__nav-button">Дополнительные услуги</button>
-            <button type="button" class="side-menu__nav-button">Цены на услуги</button>
-            <button type="button" class="side-menu__nav-button">Адреса сервисных центров</button>
-            <button type="button" class="side-menu__nav-button">Отзывы</button>
+    </header>
+    <nav class="main__side-menu-container">
+        <ul class="side-menu">
+            <li><a href="#" class="side-menu__nav-link">Ремонтируемые устройства</a></li>
+            <li><a href="#" class="side-menu__nav-link">Ремонтируемые бренды</a></li>
+            <li><a href="#" class="side-menu__nav-link">Дополнительные услуги</a></li>
+            <li><a href="#" class="side-menu__nav-link">Цены на услуги</a></li>
+            <li><a href="#" class="side-menu__nav-link">Адреса сервисных центров</a></li>
+            <li><a href="#" class="side-menu__nav-link">Отзывы</a></li>
+        </ul> 
     </nav>
     <article class="main__content content">
         <div class="content__text-container">
             <p class="text-container__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-            <button class="text-container__show-more show-more">Читать далее</button>
+            <p class="text-container__text text-container__more">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span class="text-container__more-more text-container__text">, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span></p>
+            <label><button class="text-container__show-more show-more">Читать далее</button></label>
         </div>
-        <img class="content__content-img" src="imgs/01.png" alt="Наша гордая стена">
+        <img class="content__content-img" src="imgs/01.jpg" alt="Наша гордая стена">
     </article>
    </main>
 </body>
