@@ -1,0 +1,102 @@
+.page {
+    margin: 0;
+    display: flex;
+}
+
+.mobile-menu {
+    font-family: 'TT Lakes';
+    width: 320px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 24px;
+    padding-bottom: 32px;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+}
+
+.mobile-menu__header {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 53px;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+mobile-menu__side-nav-list-container {
+    margin-bottom: auto;
+}
+
+.side-nav-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-left: 0;
+    gap: 28px;
+    list-style-type: none;
+}
+
+.side-nav-list__nav-link {
+    display: flex;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 32px;
+    white-space: nowrap; 
+    color: #1B1C21;
+    overflow: hidden;
+}
+
+.side-nav-list__nav-link:focus {
+    color: #7e7e82;
+    border-radius: 5px;
+}
+.side-nav-list__nav-link:focus::before{
+    content: url("data:image/svg+xml,%3Csvg width='4' height='32' viewBox='0 0 4 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4 4C4 1.79086 2.20914 0 0 0V32C2.20914 32 4 30.2091 4 28V4Z' fill='%2341F6D7'/%3E%3C/svg%3E");
+    height: 24px;
+    width: 4px;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.side-footer__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.side-footer__btn-container{
+    display: flex;
+    gap: 16px;
+}
+
+.side-footer__email {
+font-size: 16px;
+line-height: 24px;
+letter-spacing: -0.2px;
+color: #1B1C21;
+}
+
+.side-footer__phone-number {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+}
+
+.language-switcher__lang {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+}
+
+.language-switcher__lang:focus {
+    color: #7e7e82;
+    border-radius: 5px;
+}
