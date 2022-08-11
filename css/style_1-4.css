@@ -89,14 +89,18 @@ color: #1B1C21;
     color: #1B1C21;
 }
 
-.language-switcher__lang {
+.language-switcher__lang-input {
+    display: nonne;
+}
+
+.language-switcher__lang-input:checked ~ .language-switcher__lang-label {
+    color: #7e7e82;
+}
+
+.language-switcher__lang-label {
+    cursor: pointer;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #1B1C21;
-}
-
-.language-switcher__lang:focus {
-    color: #7e7e82;
-    border-radius: 5px;
 }

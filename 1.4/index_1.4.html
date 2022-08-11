@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style_1-4.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="../css/style_1-4.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../fonts/stylesheet.css">
     <title>1.4 макет</title>
 </head>
 <body class="page">
     <div class="mobile-menu">
         <header class="mobile-menu__header">
             <button class="accent-button accent-button_close"></button>
-            <img src="imgs/logo.svg" alt="CPS Логотип" class="logo">
+            <img src="../imgs/logo.svg" alt="CPS Логотип" class="logo">
             <button class="accent-button accent-button_search"></button>
         </header>
         <nav class="mobile-menu__side-nav-list-container">
@@ -37,11 +37,14 @@
                 <div class="side-footer__email">main@cps.com</div>
                 <div class="side-footer__phone-number">8 800 890 8900</div>
             </div>
-            <div class="side-footer__language-swither language-swither">
-                <button class="language-switcher__lang">RU</button>
-                <button class="language-switcher__lang">EN</button>
-                <button class="language-switcher__lang">CN</button>
-            </div>
+            <form class="side-footer__language-swither-form language-swither">
+                <input id="ru-lang" type="radio" name="lang" value="ru" class="language-switcher__lang-input" checked>
+                <label for="ru-lang" class="language-switcher__lang-label">RU</label>
+                <input id="en-lang" type="radio" name="lang" value="en" class="language-switcher__lang-input">
+                <label for="en-lang" class="language-switcher__lang-label">EN</label>
+                <input id="cn-lang" type="radio" name="lang" value="cn" class="language-switcher__lang-input">
+                <label for="cn-lang" class="language-switcher__lang-label">CN</label>
+            </form>
         </footer>
     </div>
 </body>
