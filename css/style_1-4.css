@@ -9,6 +9,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     padding-left: 24px;
     padding-right: 24px;
     padding-top: 24px;
@@ -51,9 +52,10 @@ mobile-menu__side-nav-list-container {
 }
 
 .side-nav-list__nav-link:focus {
+    transition: color 1s;
     color: #7e7e82;
-    border-radius: 5px;
 }
+
 .side-nav-list__nav-link:focus::before{
     content: url("data:image/svg+xml,%3Csvg width='4' height='32' viewBox='0 0 4 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4 4C4 1.79086 2.20914 0 0 0V32C2.20914 32 4 30.2091 4 28V4Z' fill='%2341F6D7'/%3E%3C/svg%3E");
     height: 24px;
@@ -61,6 +63,12 @@ mobile-menu__side-nav-list-container {
     position: absolute;
     left: 0;
     z-index: 1;
+}
+
+.mobile-menu__side-footer {
+    position: absolute;
+    left: 24px;
+    bottom: 32px;
 }
 
 .side-footer__contact {
@@ -90,7 +98,7 @@ color: #1B1C21;
 }
 
 .language-switcher__lang-input {
-    display: nonne;
+    display: none;
 }
 
 .language-switcher__lang-input:checked ~ .language-switcher__lang-label {
@@ -103,4 +111,10 @@ color: #1B1C21;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #1B1C21;
+}
+
+.side-footer__language-swither-form {
+    display: flex;
+    gap: 7px;
+    margin-top: 40px;
 }

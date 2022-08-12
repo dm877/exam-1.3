@@ -27,7 +27,7 @@
                 <li><a href="#" class="side-nav-list__nav-link">Контакты</a></li>
             </ul> 
         </nav>
-        <footer class="mobile-menu__side-footer">
+        <footer class="mobile-menu__side-footer side-footer">
             <div class="side-footer__contact">
                 <div class="side-footer__btn-container">
                     <button class="accent-button accent-button_call"></button>
@@ -38,12 +38,18 @@
                 <div class="side-footer__phone-number">8 800 890 8900</div>
             </div>
             <form class="side-footer__language-swither-form language-swither">
-                <input id="ru-lang" type="radio" name="lang" value="ru" class="language-switcher__lang-input" checked>
-                <label for="ru-lang" class="language-switcher__lang-label">RU</label>
-                <input id="en-lang" type="radio" name="lang" value="en" class="language-switcher__lang-input">
-                <label for="en-lang" class="language-switcher__lang-label">EN</label>
-                <input id="cn-lang" type="radio" name="lang" value="cn" class="language-switcher__lang-input">
-                <label for="cn-lang" class="language-switcher__lang-label">CN</label>
+                <span class="language-switcher__lang-container">
+                    <input id="ru-lang" type="radio" name="lang" value="ru" class="language-switcher__lang-input" checked>
+                    <label for="ru-lang" class="language-switcher__lang-label">RU</label>
+                </span>
+                <span class="language-switcher__lang-container">
+                    <input id="en-lang" type="radio" name="lang" value="en" class="language-switcher__lang-input">
+                    <label for="en-lang" class="language-switcher__lang-label">EN</label>
+                </span class="language-switcher__lang-container">
+                <span>
+                    <input id="cn-lang" type="radio" name="lang" value="cn" class="language-switcher__lang-input">
+                    <label for="cn-lang" class="language-switcher__lang-label">CN</label>
+                </span>
             </form>
         </footer>
     </div>
