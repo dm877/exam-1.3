@@ -7,6 +7,7 @@
     font-family: 'TT Lakes';
     width: 320px;
     height: 100vh;
+    min-height: min-content;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -15,6 +16,13 @@
     padding-top: 24px;
     padding-bottom: 32px;
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+}
+
+.mobile-menu__main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .mobile-menu__header {
@@ -66,9 +74,6 @@ mobile-menu__side-nav-list-container {
 }
 
 .mobile-menu__side-footer {
-    position: absolute;
-    left: 24px;
-    bottom: 32px;
 }
 
 .side-footer__contact {
