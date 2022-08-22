@@ -41,11 +41,17 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 16px;
+    min-width: 224px;
     width: 224px;
     height: 72px;
     background: #FFFFFF;
     border: 1px solid #EAEAEA;
     border-radius: 6px;
+}
+
+.brand-item__logo {
+    max-height: 70%;
+    max-width: 70%;
 }
 
 .brand-item__button {
