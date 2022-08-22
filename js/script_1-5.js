@@ -1,7 +1,7 @@
 let brandsData = [
-    { title: 'Apple', link: '#', imageUrl: '../imgs/brands/apple.svg'},
-    { title: 'Sony', link: '#', imageUrl: '../imgs/brands/sony.svg'},
     { title: 'Lenovo', link: '#', imageUrl: '../imgs/brands/lenovo.svg'},
+    { title: 'Sony', link: '#', imageUrl: '../imgs/brands/sony.svg'},
+    { title: 'Apple', link: '#', imageUrl: '../imgs/brands/apple.svg'},
     { title: 'Acer', link: '#', imageUrl: '../imgs/brands/acer.svg'},
     { title: 'ViewSonic', link: '#', imageUrl: '../imgs/brands/view-sonic.svg'},
     { title: 'HP', link: '#', imageUrl: '../imgs/brands/hp.svg'},
@@ -36,8 +36,17 @@ function setMedia() {
 
 setMedia();
 
+import Swiper, { Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+const swiper = new Swiper('.swiper', {
+    modules: Pagination,
+});
+
+
 function toMobileMod() {
-    
+
 }
 
 function toDesktopMod() {
