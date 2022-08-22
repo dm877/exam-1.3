@@ -14,48 +14,55 @@ let brandsData = [
 ];
 let brandItemsCount = 6;
 
-const mobile = window.matchMedia( '(max-width: 767px)' );
-const desktop  = window.matchMedia( '(max-width: 1119px, min-width: 768px)' );
-const desktopLarge  = window.matchMedia( '(min-width: 1120px)' );
-
 function setMedia() {
-    if (desktop.matches) {
+    if (window.matchMedia('(max-width: 1119px, min-width: 768px)').matches) {
         console.log('desktop');
-        brandItemsCount = 6;
     }
-    if(mobile.matches) {
+    if(window.matchMedia('(min-width: 768px)').matches) { // от 768
+        if (window.matchMedia( '(min-width: 1120px)').matches) { // от 1120 и больше
+            brandItemsCount = 8;
+        }
+        else { // от 768 до 1120
+            brandItemsCount = 6;
+        }
+        console.log('desktop');
+        toDesktopMod();
+    } else { // меньше 768
         console.log('mobile');
         brandItemsCount = brandsData.length;
+        toMobileMod()
     }
-    if (desktopLarge.matches) {
-        console.log('desktopLarge');
-        brandItemsCount = 8;
-    } 
 }
 
 setMedia();
 
-let additionalBrandItems = [];
+function toMobileMod() {
+    
+}
+
+function toDesktopMod() {
+    let showMore = document.querySelector('.show-more');
+    let additionalBrandItems = [];
+
+    showMore.addEventListener('click', function () {
+        if (showMore.textContent === 'Показать все') {
+            for(let i = brandItems.children.length-1; i < brandsData.length; i++) {
+                additionalBrandItems.push(makeBrandItem(brandsData[i]));
+            }
+            showMore.textContent = 'Скрыть'; 
+        }
+        else {
+            while(additionalBrandItems.length>0) {
+                additionalBrandItems.pop().remove();
+            }
+            showMore.textContent = 'Показать все';
+        }
+    });
+}
+
 
 let brandItemTemplate = document.querySelector('.brand-items__brand-item-template').content;
 let brandItems = document.querySelector('.brand-list__brand-items');
-
-let showMore = document.querySelector('.show-more');
-
-showMore.addEventListener('click', function () {
-    if (showMore.textContent === 'Показать все') {
-        for(let i = brandItems.children.length-1; i < brandsData.length; i++) {
-            additionalBrandItems.push(makeBrandItem(brandsData[i]));
-        }
-        showMore.textContent = 'Скрыть'; 
-    }
-    else {
-        while(additionalBrandItems.length>0) {
-            additionalBrandItems.pop().remove();
-        }
-        showMore.textContent = 'Показать все';
-    }
-});
 
 function makeBrandItem(brandData) {
     let brandItem = brandItemTemplate.cloneNode(true).querySelector('.brand-item');

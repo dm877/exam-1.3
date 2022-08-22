@@ -88,9 +88,18 @@ body {
     height: 12px;
 }
 
-@media (max-width: 1110px) {
+@media (min-width: 768px) {
+
 }
-@media (max-width: 768px) {
-}
-@media (min-width: 1110px) {
+@media (max-width: 767px) {
+    .show-more {
+        display: none;
+    }
+    .brand-list__show-more {
+        display: none;
+    }
+    .brand-list__brand-items {
+        flex-wrap: nowrap;
+        overflow: scroll;
+    }
 }
