@@ -1,3 +1,7 @@
+import Swiper, { Pagination } from '../node_modules/swiper/swiper.d.ts';
+import 'swiper/css';
+import 'swiper/css/pagination';
+
 let brandsData = [
     { title: 'Lenovo', link: '#', imageUrl: '../imgs/brands/lenovo.svg'},
     { title: 'Sony', link: '#', imageUrl: '../imgs/brands/sony.svg'},
@@ -36,16 +40,16 @@ function setMedia() {
 
 setMedia();
 
-import Swiper, { Pagination } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/pagination';
-
-const swiper = new Swiper('.swiper', {
-    modules: Pagination,
-});
-
-
 function toMobileMod() {
+    const swiper = new Swiper('.swiper', {
+        modules: [Pagination],
+        direction: 'horizontal',
+        loop: true,
+    
+        pagination: {
+        el: '.swiper-pagination',
+      },
+});
 
 }
 
