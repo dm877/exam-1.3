@@ -63,9 +63,9 @@ body {
 
 .brand-list__show-more {
     margin-top: 24px;
-    padding-bottom: 34px;
-    padding-left: 24px;
-    padding-right: 24px;
+    margin-bottom: 34px;
+    margin-left: 24px;
+    margin-right: 24px;
 }
 
 .show-more {
