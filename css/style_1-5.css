@@ -91,6 +91,16 @@ body {
     height: 12px;
 }
 
+@media (min-width: 1120px) {
+    .brand-list__brand-items {
+        column-gap: 32px;
+        margin: 0 32px;
+    }
+    .brand-item {
+        min-width: 240px;
+    }
+}
+
 @media (min-width: 768px) {
     .brand-list {
         background-image: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 100%);

@@ -9,7 +9,6 @@ let brandsData = [
     { title: 'Bosch', link: '#', imageUrl: '../imgs/brands/bosch.svg'},
     { title: 'Xiaomi', link: '#', imageUrl: '../imgs/brands/xiaomi.svg'},
     { title: 'Nokia', link: '#', imageUrl: '../imgs/brands/nokia.svg'},
-    { title: 'Sony', link: '#', imageUrl: '../imgs/brands/sony.svg'},
     { title: 'Huawei', link: '#', imageUrl: '../imgs/brands/huawei.svg'}
 ];
 let brandItemsCount = 6;
@@ -39,7 +38,7 @@ function toDesktopMod() {
 
     showMore.addEventListener('click', function () {
         if (showMore.textContent === 'Показать все') {
-            for (let i = brandItems.children.length - 1; i < brandsData.length; i++) {
+            for (let i = brandItems.children.length - 2; i < brandsData.length; i++) {
                 additionalBrandItems.push(makeBrandItem(brandsData[i]));
             }
             showMore.textContent = 'Скрыть';
@@ -75,8 +74,6 @@ function setMedia() {
         toMobileMod();
     }
 }
-
-
 
 function makeBrandItem(brandData, isMobile) {
     let brandItem = brandItemTemplate.cloneNode(true).querySelector('.brand-item');
