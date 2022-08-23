@@ -6,10 +6,8 @@ body {
     font-family: 'TT Lakes';
     background-color: #EAEAEA;
     border-top: 1px solid #D9FFF5;
-
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-bottom: 34px;
+    display: flex;
+    flex-direction: column;
 }
 
 .brand-list__header-text {
@@ -19,19 +17,21 @@ body {
     letter-spacing: -0.2px;
     text-transform: uppercase;
     color: #7E7E82;
-    margin-top: 16px;
-
-    margin-bottom: 40px;
+    
+    padding-top: 16px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .brand-list__brand-items {
     list-style-type: none;
-    margin: 0;
+    margin: 0 24px;
     padding-left: 0;
-    
+     
     display: flex;
     flex-wrap: wrap;
-    column-gap: 1em;
+    column-gap: 24px;
     row-gap: 16px;
 }
 
@@ -43,6 +43,7 @@ body {
     min-width: 224px;
     width: 224px;
     height: 72px;
+    box-sizing: border-box;
     background: #FFFFFF;
     border: 1px solid #EAEAEA;
     border-radius: 6px;
@@ -62,6 +63,9 @@ body {
 
 .brand-list__show-more {
     margin-top: 24px;
+    padding-bottom: 34px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .show-more {
@@ -91,6 +95,9 @@ body {
     .brand-list {
         background-image: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 100%);
     }
+    .swiper-pagination {
+        display: none;
+    }
 }
 @media (max-width: 767px) {
     .brand-list {
@@ -103,12 +110,33 @@ body {
         display: none;
     }
     .brand-list__brand-items {
-        column-gap: 16px;
+        column-gap: 0px;
         flex-wrap: nowrap;
         overflow: scroll;
     }
     .swiper {
         width: 100%;
         height: 100px;
+        padding-bottom: 30px;
+    }
+    .swiper-slide {
+        max-width: 224px;
+        max-height: 72px;
+    }
+    .swiper-pagination {
+        display: flex;
+        column-gap: 12px;
+        justify-content: center;
+    }
+
+    .swiper .swiper-pagination-bullet {
+        margin: 0;
+        min-width: 12px;
+        min-height: 12px;
+        background-color: #DDDDDD;
+    }
+
+    .swiper .swiper-pagination-bullet-active {
+        background-color: #B5B6BC;
     }
 }

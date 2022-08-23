@@ -1,7 +1,3 @@
-import Swiper, { Pagination } from '../node_modules/swiper/swiper.d.ts';
-import 'swiper/css';
-import 'swiper/css/pagination';
-
 let brandsData = [
     { title: 'Lenovo', link: '#', imageUrl: '../imgs/brands/lenovo.svg'},
     { title: 'Sony', link: '#', imageUrl: '../imgs/brands/sony.svg'},
@@ -17,6 +13,48 @@ let brandsData = [
     { title: 'Huawei', link: '#', imageUrl: '../imgs/brands/huawei.svg'}
 ];
 let brandItemsCount = 6;
+let brandItemTemplate = document.querySelector('.brand-items__brand-item-template').content;
+let brandItems = document.querySelector('.brand-list__brand-items');
+
+setMedia();
+
+function toMobileMod() {
+    swiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+        loop: true,
+
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+    brandItems.classList.add('.swiper');
+    for (let i = 0; i < brandItemsCount; i++) {
+        makeBrandItem(brandsData[i], true);
+    }
+}
+
+function toDesktopMod() {
+    let showMore = document.querySelector('.show-more');
+    let additionalBrandItems = [];
+
+    showMore.addEventListener('click', function () {
+        if (showMore.textContent === 'Показать все') {
+            for (let i = brandItems.children.length - 1; i < brandsData.length; i++) {
+                additionalBrandItems.push(makeBrandItem(brandsData[i]));
+            }
+            showMore.textContent = 'Скрыть';
+        }
+        else {
+            while (additionalBrandItems.length > 0) {
+                additionalBrandItems.pop().remove();
+            }
+            showMore.textContent = 'Показать все';
+        }
+    });
+    for (let i = 0; i < brandItemsCount; i++) {
+        makeBrandItem(brandsData[i], false);
+    }
+}
 
 function setMedia() {
     if (window.matchMedia('(max-width: 1119px, min-width: 768px)').matches) {
@@ -33,51 +71,14 @@ function setMedia() {
         toDesktopMod();
     } else { // меньше 768
         console.log('mobile');
-        brandItemsCount = brandsData.length;
-        toMobileMod()
+        brandItemsCount = 9;
+        toMobileMod();
     }
 }
 
-setMedia();
-
-function toMobileMod() {
-    const swiper = new Swiper('.swiper', {
-        modules: [Pagination],
-        direction: 'horizontal',
-        loop: true,
-    
-        pagination: {
-        el: '.swiper-pagination',
-      },
-});
-
-}
-
-function toDesktopMod() {
-    let showMore = document.querySelector('.show-more');
-    let additionalBrandItems = [];
-
-    showMore.addEventListener('click', function () {
-        if (showMore.textContent === 'Показать все') {
-            for(let i = brandItems.children.length-1; i < brandsData.length; i++) {
-                additionalBrandItems.push(makeBrandItem(brandsData[i]));
-            }
-            showMore.textContent = 'Скрыть'; 
-        }
-        else {
-            while(additionalBrandItems.length>0) {
-                additionalBrandItems.pop().remove();
-            }
-            showMore.textContent = 'Показать все';
-        }
-    });
-}
 
 
-let brandItemTemplate = document.querySelector('.brand-items__brand-item-template').content;
-let brandItems = document.querySelector('.brand-list__brand-items');
-
-function makeBrandItem(brandData) {
+function makeBrandItem(brandData, isMobile) {
     let brandItem = brandItemTemplate.cloneNode(true).querySelector('.brand-item');
     let brandItemLogo = brandItem.querySelector('.brand-item__logo');
     brandItemLogo.src = brandData.imageUrl;
@@ -86,10 +87,13 @@ function makeBrandItem(brandData) {
     let brandItemButton = brandItem.querySelector('.brand-item__button');
     brandItemButton.href = brandData.link;
 
-    brandItems.appendChild(brandItem);
+    if(isMobile) {
+        console.log(brandItem);
+        brandItem.classList.add('swiper-slide');
+        brandItems.appendChild(brandItem);
+    }
+    else {
+        brandItems.appendChild(brandItem);
+    }
     return brandItem;
-}
-
-for (let i = 0; i < brandItemsCount; i++) {
-    makeBrandItem(brandsData[i]);
 }
