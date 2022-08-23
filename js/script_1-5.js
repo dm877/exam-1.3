@@ -1,15 +1,15 @@
 let brandsData = [
-    { title: 'Lenovo', link: '#', imageUrl: '../imgs/brands/lenovo.svg'},
-    { title: 'Sony', link: '#', imageUrl: '../imgs/brands/sony.svg'},
-    { title: 'Apple', link: '#', imageUrl: '../imgs/brands/apple.svg'},
-    { title: 'Acer', link: '#', imageUrl: '../imgs/brands/acer.svg'},
-    { title: 'ViewSonic', link: '#', imageUrl: '../imgs/brands/view-sonic.svg'},
-    { title: 'HP', link: '#', imageUrl: '../imgs/brands/hp.svg'},
-    { title: 'Samsung', link: '#', imageUrl: '../imgs/brands/samsung.svg'},
-    { title: 'Bosch', link: '#', imageUrl: '../imgs/brands/bosch.svg'},
-    { title: 'Xiaomi', link: '#', imageUrl: '../imgs/brands/xiaomi.svg'},
-    { title: 'Nokia', link: '#', imageUrl: '../imgs/brands/nokia.svg'},
-    { title: 'Huawei', link: '#', imageUrl: '../imgs/brands/huawei.svg'}
+    { title: 'Lenovo', link: '#', imageUrl: './imgs/brands/lenovo.svg'},
+    { title: 'Sony', link: '#', imageUrl: './imgs/brands/sony.svg'},
+    { title: 'Apple', link: '#', imageUrl: './imgs/brands/apple.svg'},
+    { title: 'Acer', link: '#', imageUrl: './imgs/brands/acer.svg'},
+    { title: 'ViewSonic', link: '#', imageUrl: './imgs/brands/view-sonic.svg'},
+    { title: 'HP', link: '#', imageUrl: './imgs/brands/hp.svg'},
+    { title: 'Samsung', link: '#', imageUrl: './imgs/brands/samsung.svg'},
+    { title: 'Bosch', link: '#', imageUrl: './imgs/brands/bosch.svg'},
+    { title: 'Xiaomi', link: '#', imageUrl: './imgs/brands/xiaomi.svg'},
+    { title: 'Nokia', link: '#', imageUrl: './imgs/brands/nokia.svg'},
+    { title: 'Huawei', link: '#', imageUrl: './imgs/brands/huawei.svg'}
 ];
 let brandItemsCount = 6;
 let brandItemTemplate = document.querySelector('.brand-items__brand-item-template').content;
