@@ -24,13 +24,11 @@ let brandListWrapper = document.querySelector('.brand-list__brand-item-wrapper')
 function mobileMod() {
     new Swiper('.brands__brand-list', {
     direction: 'horizontal',
-    //loop: true,
     clickable: true,
-    spaceBetween: 1,
+    spaceBetween: 20,
     slidesPerView: 1,
     slidesPerGroup: 1,
-    centeredSlides: true,
-    width: 240,
+    width: 224,
 
     pagination: {
       el: '.brand-list__pagination',
