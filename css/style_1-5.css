@@ -121,7 +121,7 @@ body {
 }
 @media (max-width: 767px) { /* M O B I L E */
     .brands {
-        background-image: linear-gradient(to bottom, #FFFFFF 0%, transparent 30%);
+        background-image: linear-gradient(to bottom, #F8F8F8 0%, transparent 80%);
     }
     .show-more {
         display: none;
@@ -136,6 +136,11 @@ body {
     .brands__brand-list {
         padding-left: 16px;
         margin-top: 0;
+    }
+
+    .brand-list__pagination {
+        font-size: 12px;
+        line-height: 12px;
     }
 
     .brand-list__pagination .swiper-pagination-bullet {

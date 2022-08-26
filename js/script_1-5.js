@@ -12,7 +12,7 @@ let brandsData = [
     { title: 'Huawei', link: '#', imageUrl: './imgs/brands/huawei.svg'}
 ];
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.brands__brand-list', {
     direction: 'horizontal',
     //loop: true,
     clickable: true,
@@ -23,7 +23,7 @@ const swiper = new Swiper('.swiper', {
     width: 240,
 
     pagination: {
-      el: '.swiper-pagination',
+      el: '.brand-list__pagination',
     },
 
     observer: true,
