@@ -12,10 +12,30 @@ let brandsData = [
     { title: 'Huawei', link: '#', imageUrl: './imgs/brands/huawei.svg'}
 ];
 
+const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    //loop: true,
+    clickable: true,
+    spaceBetween: 20,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    centeredSlides: true,
+    width: 240,
+
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    observer: true,
+  
+});
+
 let brandItemCount = 6;
 
 let brandItemTemplate = document.querySelector('.brand-item-template').content;
 let brandListWrapper = document.querySelector('.brand-list__brand-item-wrapper');
+
+
 
 function mobileMod() {
 
