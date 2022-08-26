@@ -4,26 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style_1-5.css">
-    <link rel="stylesheet" href="fonts/stylesheet.css">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="css/style_1-5.css">
     <title>1.5</title>
 </head>
 <body>
-    <div class="brand-list">
-        <header class="brand-list__header-text">Ремонт техники различных брендов</header>
-        <ul class="brand-list__brand-items">
-            <template class="brand-items__brand-item-template">
-                <li class="brand-item">
-                    <img src="" alt="Логитип" class="brand-item__logo">
+    <div class="brands">
+        <header class="brands__header-text">Ремонт техники различных брендов</header>
+        <ul class="brands__brand-list swiper">
+            <div class="brand-list__brand-item-wrapper swiper-wrapper">
+                <template class="brand-item-template">
+                    <li class="brand-list__brand-item brand-item swiper-slide">
+                        <img src="" alt="" class="brand-item__logo">
+                        <a href="#" class="brand-item__button"></a>
+                    </li>
+                </template>
+                <li class="brand-list__brand-item brand-item swiper-slide">
+                    <img src="" alt="" class="brand-item__logo">
                     <a href="#" class="brand-item__button"></a>
                 </li>
-            </template>
-            <div class="swiper-pagination"></div>
+            </div>
+            <div class="brand-list__pagination swiper-pagination"></div>
         </ul>
-        <label><button type="button" class="brand-list__show-more show-more">Показать все</button></label>
+        <label><button type="button" class="brands__show-more show-more">Показать все</button></label>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+        const swiper = new Swiper('.brand__brand-list', {
+            direction: 'horizontal',
+            loop: true,
+
+            pagination: {
+            el: '.brand-list__pagination',
+            },
+        });
+    </script>
     <script src="js/script_1-5.js"></script>
 </body>
 </html>

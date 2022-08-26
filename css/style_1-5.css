@@ -2,15 +2,16 @@ body {
     margin: 0;
 }
 
-.brand-list {
+.brands {
     font-family: 'TT Lakes';
     background-color: #EAEAEA;
     border-top: 1px solid #D9FFF5;
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
-.brand-list__header-text {
+.brands__header-text {
     font-family: 'TT Lakes';
     font-size: 16px;
     line-height: 24px;
@@ -24,15 +25,18 @@ body {
     padding-right: 24px;
 }
 
-.brand-list__brand-items {
-    list-style-type: none;
-    margin: 0 24px;
-    padding-left: 0;
-     
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 16px;
+.brands__brand-list {
+    width: 100%;
+    height: 100px;
+
+}
+
+.brand-list__brand-item-wrapper {
+
+}
+
+.brand-list__brand-item {
+
 }
 
 .brand-item {
@@ -61,7 +65,7 @@ body {
     background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='38' height='38' rx='19' stroke='%23FF3E79' stroke-width='2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z' fill='%23FF3E79'/%3E%3C/svg%3E");
 }
 
-.brand-list__show-more {
+.brands__show-more {
     margin-top: 24px;
     margin-bottom: 34px;
     margin-left: 24px;
@@ -92,7 +96,7 @@ body {
 }
 
 @media (min-width: 1120px) {
-    .brand-list__brand-items {
+    .brands__brand-list {
         column-gap: 32px;
         margin: 0 32px;
     }
@@ -102,51 +106,33 @@ body {
 }
 
 @media (min-width: 768px) {
-    .brand-list {
+    .brands {
         background-image: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 100%);
     }
-    .swiper-pagination {
+
+    .brand-list__pagination {
         display: none;
     }
+
+    .brands__brand-list {
+        list-style-type: none;
+        margin: 0 24px;
+        padding-left: 0;
+        
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 16px;
+    }
 }
-@media (max-width: 767px) {
-    .brand-list {
+@media (max-width: 767px) { /* M O B I L E */
+    .brands {
         background-image: linear-gradient(90deg, #FFFFFF 0%, transparent 40%);
     }
     .show-more {
         display: none;
     }
-    .brand-list__show-more {
+    .brands__show-more {
         display: none;
     }
-    .brand-list__brand-items {
-        column-gap: 0px;
-        flex-wrap: nowrap;
-        overflow: scroll;
-    }
-    .swiper {
-        width: 100%;
-        height: 100px;
-        padding-bottom: 30px;
-    }
-    .swiper-slide {
-        max-width: 224px;
-        max-height: 72px;
-    }
-    .swiper-pagination {
-        display: flex;
-        column-gap: 12px;
-        justify-content: center;
-    }
-
-    .swiper .swiper-pagination-bullet {
-        margin: 0;
-        min-width: 12px;
-        min-height: 12px;
-        background-color: #DDDDDD;
-    }
-
-    .swiper .swiper-pagination-bullet-active {
-        background-color: #B5B6BC;
-    }
-}
+}    
