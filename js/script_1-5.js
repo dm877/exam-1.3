@@ -12,23 +12,7 @@ let brandsData = [
     { title: 'Huawei', link: '#', imageUrl: './imgs/brands/huawei.svg'}
 ];
 
-const swiper = new Swiper('.brands__brand-list', {
-    direction: 'horizontal',
-    //loop: true,
-    clickable: true,
-    spaceBetween: 20,
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    centeredSlides: true,
-    width: 240,
 
-    pagination: {
-      el: '.brand-list__pagination',
-    },
-
-    observer: true,
-  
-});
 
 let brandItemCount = 6;
 
@@ -38,6 +22,21 @@ let brandListWrapper = document.querySelector('.brand-list__brand-item-wrapper')
 
 
 function mobileMod() {
+    new Swiper('.brands__brand-list', {
+    direction: 'horizontal',
+    //loop: true,
+    clickable: true,
+    spaceBetween: 1,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    centeredSlides: true,
+    width: 240,
+
+    pagination: {
+      el: '.brand-list__pagination',
+    },
+    observer: true,
+    });
 
     for (let i = 0; i < brandItemCount; i++) {
         makeBrandItem(brandsData[i], true);
@@ -48,10 +47,12 @@ function mobileMod() {
 function desktopMod() {
     let showMore = document.querySelector('.show-more');
     let additionalBrandItems = [];
+    
+    document.querySelector('.brands__brand-list').classList.remove('swiper');
 
     showMore.addEventListener('click', function () {
         if (showMore.textContent === 'Показать все') {
-            for (let i = brandListWrapper.children.length - 2; i < brandsData.length; i++) {
+            for (let i = brandListWrapper.children.length - 1; i < brandsData.length; i++) {
                 additionalBrandItems.push(makeBrandItem(brandsData[i]));
             }
             showMore.textContent = 'Скрыть';
