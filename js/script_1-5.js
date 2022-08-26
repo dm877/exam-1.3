@@ -100,7 +100,7 @@ function setDisplayMod() {
         desktopMod();
     } else { // меньше 768
         console.log('mobile mod');
-        brandItemCount = 9;
+        brandItemCount = 8;
         mobileMod();
     }
 }
